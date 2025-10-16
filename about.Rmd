@@ -1,8 +1,7 @@
 ---
 title: "about this website"
 output: 
-  html_document:
-    theme: cerulean
+  html_document
 ---
 
 This website was coded by lls using Rmarkdown to do all the hard work.

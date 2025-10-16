@@ -31,4 +31,7 @@ plot_df |>
   geom_point()
 ```
 
-Go back to the [homepage](index.html).
+
+
+
+Now Go back to the [homepage](index.html).
