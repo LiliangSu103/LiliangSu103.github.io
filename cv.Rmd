@@ -1,0 +1,85 @@
+---
+title: "Your Name — Resume"
+output:
+  html_document:
+    toc: false
+    theme: flatly
+---
+
+# Your Name
+**Biostatistics Student · Columbia University**  
+📧 [you@email.com](mailto:you@email.com) · 🌐 [yourwebsite.github.io](https://yourwebsite.github.io) · 💼 [linkedin.com/in/yourname](https://linkedin.com/in/yourname)
+
+---
+
+## Top Row
+
+<div style="display: flex; justify-content: space-between;">
+
+<div style="flex: 0 0 48%;">
+
+### Education
+**Columbia University** — *M.S. in Biostatistics*  
+*Expected May 2026, New York, NY*  
+- Focus: Causal Inference, Transfer Learning, Statistical Modeling  
+- GPA: 3.9 / 4.0  
+
+**University of [Your Undergrad]** — *B.S. in Applied Mathematics*  
+*Graduated 2024*  
+- Minor: Computer Science  
+- Honors Graduate  
+
+</div>
+
+<div style="flex: 0 0 48%;">
+
+### Experience
+**Research Assistant**, Dept. of Biostatistics — *Columbia University*  
+*2024 – Present*  
+- Conduct statistical analyses for epidemiologic studies using R and Python.  
+- Develop reproducible data pipelines for health datasets.  
+
+**Teaching Assistant**, Data Science Course  
+*2023 – 2024*  
+- Led weekly R labs and grading of data analysis projects.  
+- Assisted 50+ students with data wrangling and visualization techniques.  
+
+</div>
+</div>
+
+---
+
+## Bottom Row
+
+### Skills & Interests
+**Technical Skills:**  
+R (tidyverse, ggplot2, shiny), Python (pandas, scikit-learn), SQL, Git, LaTeX  
+
+**Analytical Skills:**  
+Regression Modeling, Time Series, Bayesian Inference  
+
+**Soft Skills:**  
+Team Collaboration, Scientific Writing, Public Communication  
+
+**Interests:**  
+Photography, Creative Writing, Space Science, Basketball  
+
+---
+
+<style>
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  color: #222;
+}
+h1, h2, h3 {
+  color: #004c97;
+  font-weight: 600;
+}
+div {
+  margin-bottom: 10px;
+}
+</style>
+

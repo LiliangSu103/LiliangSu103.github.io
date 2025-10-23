@@ -1,27 +1,33 @@
 ---
-title: "My awesome website"
+title: "Liliang Su's Website"
 output: 
   html_document:
     toc: true
     toc_float: true
 ---
 
-# This is Jeff's awesome website
 
-![](https://media.giphy.com/media/drXGoW1iudhKw/giphy.gif)
+# Welcome
+
+Hi! I’m **Liliang Su**, a graduate student in **Biostatistics** with interest in **Transfer Learning**, **Causal Inference**, and **Statistical Modeling**.  
+
+This website showcases my academic work, data visualization projects, and professional experience.
+
+Learn more [about this site](about.html). 
 
 
-You can do everything you might usually do.
+# Main Content
 
-That means you can add text.
+You can explore my pages below:
 
-This website is an example coming from [P8105](https://p8105.com/index.html). We're making websites today. Learn more about this site [here](about.html)
+- <i class="fa-regular fa-file"></i>  View my [Resume](resume.html) for academic and professional background.
 
-I also use [google](https://www.google.com/) a ton for data science.
+- <i class="fa-regular fa-image"></i>  Check out the [Plots](plotly.html) and [Dashboard](dashboard.html) based on NYC restaurants dataset from the [P8105](https://p8105.com/index.html) course. 
 
-To show that you can just use RMD like normal, check out [this page](plots.html) with plots.
+- <i class="fa-brands fa-github"></i>  Visit my [GitHub](https://github.com/LiliangSu103) profile for additional projects and code.
 
-Here's a picture of ted:
 
-![](image/ted.jpg)
-<i class="fa-solid fa-headphones"></i>
+Feel free to connect with me on [GitHub](https://github.com/LiliangSu103) or reach out via [Email](mailto:ls4236@cumc.columbia.edu).
+
+
+![](image/River.jpeg)

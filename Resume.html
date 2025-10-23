@@ -11,12 +11,12 @@
 
 
 
-<title>Here are some plots</title>
+<title>Resume</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -32,6 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -286,27 +288,160 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Here are some plots</h1>
+<h1 class="title toc-ignore">Resume</h1>
 
 </div>
 
 
-<p>We often make plots in data science.</p>
-<p>Here’s the tidyverse.</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<p>Here’s a dataframe.</p>
-<pre class="r"><code>plot_df = 
-  tibble(
-    x = rnorm(100, mean = 1 , sd = 2),
-    y = 1 + 2*x + rnorm(100)
-  )</code></pre>
-<p>Here’s a plot. This seems to show: <span class="math display">\[y-i =
-\beta_0 + \beta_1 x_i + \epsilon_i\]</span></p>
-<pre class="r"><code>plot_df |&gt; 
-  ggplot(aes(x=x, y=y)) +
-  geom_point()</code></pre>
-<p><img src="plots_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Now Go back to the <a href="index.html">homepage</a>.</p>
+<style>
+body { font-family: "Helvetica Neue", Arial, sans-serif; line-height:1.45; max-width:900px; margin: 28px auto; color: #222; }
+h1 { font-size: 30px; margin-bottom: 6px; }
+h2 { font-size: 18px; margin-top: 22px; color: #111; border-bottom: 1px solid #eee; padding-bottom:6px;}
+.contact { margin-bottom: 16px; }
+.contact a { margin-right: 12px; text-decoration: none; color: #0077cc; }
+.section-row { display:flex; justify-content: space-between; align-items:flex-start; }
+.job { margin-bottom: 12px; }
+.job .meta { color:#666; font-size: 0.95em; }
+.badge { font-size:0.82em; color:#fff; background:#666; padding:2px 6px; border-radius:4px; margin-left:6px; }
+.skills { display:flex; flex-wrap:wrap; gap:8px; }
+.skill-pill { padding:6px 8px; border-radius:6px; background:#f2f2f2; font-size:0.92em; }
+</style>
+<div id="liliang-su" class="section level1">
+<h1>Liliang Su</h1>
+<strong>Student / Columbia University</strong><br />
+
+<div class="contact">
+<p><a href="https://github.com/YOUR_GH_NAME" target="_blank">GitHub</a>
+<a href="mailto:you@example.com">Email</a> <a
+href="https://www.linkedin.com/in/liliang-su-797a05381/">Linkedln</a></p>
+<div id="summary" class="section level2">
+<h2>Summary</h2>
+<p>A one- or two-sentence summary: who you are, your research /
+technical focus, and what you’re looking for.<br />
+<em>E.g.</em>: “Applied mathematician and biostatistics student
+interested in transfer learning, causal inference, and reproducible data
+science.”</p>
+</div>
+<div id="education" class="section level2">
+<h2>Education</h2>
+<p><strong>Ph.D. / M.S. / B.S. — Institution Name</strong><br />
+<em>Degree, Program</em> — City, Country • <strong>Start —
+End</strong><br />
+- Advisor: Prof. Name (if relevant).<br />
+- Thesis: <em>Title of thesis / primary project</em>. Short one-line
+summary.</p>
+<p><strong>Another Degree — Institution</strong><br />
+<em>Degree, Program</em> — City, Country • <strong>Start —
+End</strong></p>
+</div>
+<div id="professional-experience" class="section level2">
+<h2>Professional Experience</h2>
+<div id="job-title-organization-name" class="section level3">
+<h3>Job Title — Organization Name</h3>
+<div class="meta">
+City, Country • <strong>Month YYYY — Month YYYY</strong>
+</div>
+<ul>
+<li>Brief one-line role summary (impact-oriented).</li>
+<li>Key responsibility or project #1 (use <em>quantified</em>
+achievements if possible).</li>
+<li>Key responsibility or project #2 — technologies / methods used:
+<code>R</code>, <code>tidyverse</code>, <code>stan</code>,
+<code>bash</code>, etc.</li>
+</ul>
+</div>
+<div id="job-title-organization-name-1" class="section level3">
+<h3>Job Title — Organization Name</h3>
+<div class="meta">
+City, Country • <strong>Month YYYY — Month YYYY</strong>
+</div>
+<ul>
+<li>Bullet describing accomplishments and measurable outcomes.</li>
+<li>Another achievement with tools or methods.</li>
+</ul>
+</div>
+</div>
+<div id="research-projects" class="section level2">
+<h2>Research / Projects</h2>
+<div id="project-title-link-if-hosted" class="section level3">
+<h3>Project Title (link if hosted)</h3>
+<div class="meta">
+Short project / paper description • Tools: R, Python, SQL, etc.
+</div>
+<ul>
+<li>What you built or discovered and the impact (one sentence).</li>
+<li>If code available: link to GitHub repo:
+<code>https://github.com/YOUR_GH_NAME/REPO</code>.</li>
+</ul>
+</div>
+<div id="another-project-or-paper" class="section level3">
+<h3>Another Project or Paper</h3>
+<div class="meta">
+Conference / Journal (if submitted or published) — Year
+</div>
+<ul>
+<li>One-line summary and contribution.</li>
+</ul>
+</div>
+</div>
+<div id="teaching-mentoring" class="section level2">
+<h2>Teaching &amp; Mentoring</h2>
+<strong>Course or Role — Institution</strong><br />
+
+<div class="meta">
+Semester Year
+</div>
+<ul>
+<li>Taught / assisted with: list responsibilities (lectures, labs,
+grading).</li>
+<li>Mentored X undergrad/masters students — topics and outcomes.</li>
+</ul>
+</div>
+<div id="skills" class="section level2">
+<h2>Skills</h2>
+<div class="skills">
+<p><span class="skill-pill">R (tidyverse)</span> <span
+class="skill-pill">Python (pandas, scikit-learn)</span> <span
+class="skill-pill">Bayesian inference (Stan, brms)</span> <span
+class="skill-pill">SQL</span> <span class="skill-pill">Git/GitHub</span>
+<span class="skill-pill">LaTeX</span> <span
+class="skill-pill">Docker</span></p>
+</div>
+</div>
+<div id="selected-publications-preprints" class="section level2">
+<h2>Selected Publications &amp; Preprints</h2>
+<ul>
+<li><strong>LastName, F.</strong>, Coauthor, <em>Title of paper</em>,
+<em>Journal Name</em>, Year. DOI or link.<br />
+</li>
+<li>Preprint: <em>Title</em>, arXiv:xxxx.xxxx, Year. Link.</li>
+</ul>
+</div>
+<div id="awards-honors" class="section level2">
+<h2>Awards &amp; Honors</h2>
+<ul>
+<li>Name of award — awarding body, Year. Short note if useful.</li>
+<li>Fellowship — Institution, Year.</li>
+</ul>
+</div>
+<div id="service-outreach" class="section level2">
+<h2>Service &amp; Outreach</h2>
+<ul>
+<li>Reviewer for <em>Journal Name</em> (years) / volunteer instructor at
+workshop, etc.</li>
+<li>Organizer of seminar series, hackathons, or relevant outreach.</li>
+</ul>
+</div>
+<div id="availability-contact" class="section level2">
+<h2>Availability &amp; Contact</h2>
+<p>Open to collaboration / new opportunities (optional). For quick
+contact: <strong><a href="mailto:you@example.com"
+class="email">you@example.com</a></strong> — or use the links at the
+top.</p>
+<p>Go back to the <a href="index.html">homepage</a>.</p>
+</div>
+</div>
+</div>
 
 
 

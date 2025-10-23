@@ -11,12 +11,12 @@
 
 
 
-<title>Here are some plots</title>
+<title>Your Name — Resume</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/cerulean.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -286,27 +286,84 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Here are some plots</h1>
+<h1 class="title toc-ignore">Your Name — Resume</h1>
 
 </div>
 
 
-<p>We often make plots in data science.</p>
-<p>Here’s the tidyverse.</p>
-<pre class="r"><code>library(tidyverse)</code></pre>
-<p>Here’s a dataframe.</p>
-<pre class="r"><code>plot_df = 
-  tibble(
-    x = rnorm(100, mean = 1 , sd = 2),
-    y = 1 + 2*x + rnorm(100)
-  )</code></pre>
-<p>Here’s a plot. This seems to show: <span class="math display">\[y-i =
-\beta_0 + \beta_1 x_i + \epsilon_i\]</span></p>
-<pre class="r"><code>plot_df |&gt; 
-  ggplot(aes(x=x, y=y)) +
-  geom_point()</code></pre>
-<p><img src="plots_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
-<p>Now Go back to the <a href="index.html">homepage</a>.</p>
+<div id="your-name" class="section level1">
+<h1>Your Name</h1>
+<p><strong>Biostatistics Student · Columbia University</strong><br />
+📧 <a href="mailto:you@email.com">you@email.com</a> · 🌐 <a
+href="https://yourwebsite.github.io">yourwebsite.github.io</a> · 💼 <a
+href="https://linkedin.com/in/yourname">linkedin.com/in/yourname</a></p>
+<hr />
+<div id="top-row" class="section level2">
+<h2>Top Row</h2>
+<div style="display: flex; justify-content: space-between;">
+<div id="education" class="section level3" style="flex: 0 0 48%;">
+<h3>Education</h3>
+<p><strong>Columbia University</strong> — <em>M.S. in
+Biostatistics</em><br />
+<em>Expected May 2026, New York, NY</em><br />
+- Focus: Causal Inference, Transfer Learning, Statistical Modeling<br />
+- GPA: 3.9 / 4.0</p>
+<p><strong>University of [Your Undergrad]</strong> — <em>B.S. in Applied
+Mathematics</em><br />
+<em>Graduated 2024</em><br />
+- Minor: Computer Science<br />
+- Honors Graduate</p>
+</div>
+<div id="experience" class="section level3" style="flex: 0 0 48%;">
+<h3>Experience</h3>
+<p><strong>Research Assistant</strong>, Dept. of Biostatistics —
+<em>Columbia University</em><br />
+<em>2024 – Present</em><br />
+- Conduct statistical analyses for epidemiologic studies using R and
+Python.<br />
+- Develop reproducible data pipelines for health datasets.</p>
+<p><strong>Teaching Assistant</strong>, Data Science Course<br />
+<em>2023 – 2024</em><br />
+- Led weekly R labs and grading of data analysis projects.<br />
+- Assisted 50+ students with data wrangling and visualization
+techniques.</p>
+</div>
+</div>
+<hr />
+</div>
+<div id="bottom-row" class="section level2">
+<h2>Bottom Row</h2>
+<div id="skills-interests" class="section level3">
+<h3>Skills &amp; Interests</h3>
+<p><strong>Technical Skills:</strong><br />
+R (tidyverse, ggplot2, shiny), Python (pandas, scikit-learn), SQL, Git,
+LaTeX</p>
+<p><strong>Analytical Skills:</strong><br />
+Regression Modeling, Time Series, Bayesian Inference</p>
+<p><strong>Soft Skills:</strong><br />
+Team Collaboration, Scientific Writing, Public Communication</p>
+<p><strong>Interests:</strong><br />
+Photography, Creative Writing, Space Science, Basketball</p>
+<hr />
+<style>
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  color: #222;
+}
+h1, h2, h3 {
+  color: #004c97;
+  font-weight: 600;
+}
+div {
+  margin-bottom: 10px;
+}
+</style>
+</div>
+</div>
+</div>
 
 
 

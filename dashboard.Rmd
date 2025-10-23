@@ -1,0 +1,139 @@
+---
+title: "Flexdashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    navbar:
+    - { title: "Home Page", href: "index.html" }
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(plotly)
+library(p8105.datasets)
+
+knitr::opts_chunk$set(
+  fig.width = 6,
+  fig.asp = .6,
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot2.continuous.colour = "viridis",
+  ggplot2.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+
+```
+
+
+```{r}
+data("rest_inspec")
+
+rest_inspec = rest_inspec |> 
+  rename(borough = boro) |> 
+  filter(borough != "0",
+         !is.na(score)) |> 
+  select(camis, borough, zipcode, cuisine_description, 
+         score, grade, longitude, latitude, inspection_date) |>
+  group_by(camis, inspection_date) |> 
+  summarize(
+    score = first(score),
+    grade = first(grade),
+    borough = first(borough),
+    zipcode = first(zipcode),
+    cuisine_description = first(cuisine_description),
+    longitude = first(longitude),
+    latitude = first(latitude),
+    .groups = "drop"
+  ) |> 
+  group_by(camis) |>
+  mutate(avg_score = mean(score, na.rm = TRUE),
+         n_inspections = sum(!is.na(score), na.rm = TRUE),
+         cuisine_description = if_else( 
+           str_detect(cuisine_description, regex("Latin", ignore_case = TRUE)), 
+           "Latin", cuisine_description)
+         ) |> 
+  ungroup()
+
+manhattan_rest = rest_inspec |> 
+  filter(borough == "Manhattan",
+         latitude != 0,
+         longitude != 0,
+         )
+
+
+```
+
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+### Violation Score Map in Manhattan
+
+```{r}
+manhattan_rest |> 
+  mutate(
+    label = str_c("Violation Score: ", avg_score, "\nCuisine: ", cuisine_description)
+  ) |> 
+  distinct(camis, avg_score, .keep_all = TRUE) |> 
+  filter(
+    avg_score > 0,
+    avg_score <= 30) |> 
+  slice_sample(prop = 0.4) |> 
+  plot_ly(
+    x = ~longitude, 
+    y = ~latitude, 
+    color = ~avg_score,
+    text = ~ label,
+    type = "scatter", 
+    mode = "markers",
+    alpha = 0.5
+  )
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Grade Boxplot
+
+```{r}
+manhattan_rest |> 
+  mutate(
+    grade = fct_reorder(grade, avg_score, .na_rm = TRUE),
+  ) |> 
+  plot_ly(
+    x = ~grade, y = ~avg_score, color = ~grade,
+    type = "box", colors = "viridis"
+  ) |> 
+  layout(
+    xaxis = list(title = "Health Grade Level in Manhattan"),
+    yaxis = list(title = "Average Violation Score")
+  )
+```
+
+
+### Borough Bar Chart
+
+```{r}
+rest_inspec |> 
+  group_by(borough) |> 
+  summarize(count = n_distinct(camis), .groups = "drop") |> 
+  mutate(
+    borough = fct_reorder(borough, count)
+  ) |> 
+  plot_ly(
+    x = ~borough, y = ~count, color = ~borough,
+    type = "bar"
+    ) |> 
+  layout(
+    xaxis = list(title = "Borough"),
+    yaxis = list(title = "Number of restaurants")
+  )
+```
+
+
