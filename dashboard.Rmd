@@ -1,11 +1,12 @@
 ---
-title: "Flexdashboard"
+title: "Dashboard"
 output: 
   flexdashboard::flex_dashboard:
-    orientation: columns
+    orientation: rows
     vertical_layout: fill
     navbar:
     - { title: "Home Page", href: "index.html" }
+    theme: journal
 ---
 
 ```{r setup, include=FALSE}
@@ -36,13 +37,16 @@ scale_fill_discrete = scale_fill_viridis_d
 data("rest_inspec")
 
 rest_inspec = rest_inspec |> 
-  rename(borough = boro) |> 
+  rename(borough = boro,
+         name = dba) |> 
   filter(borough != "0",
          !is.na(score)) |> 
-  select(camis, borough, zipcode, cuisine_description, 
+  select(camis, name, borough, zipcode, street, cuisine_description, 
          score, grade, longitude, latitude, inspection_date) |>
   group_by(camis, inspection_date) |> 
   summarize(
+    street = first(street),
+    name = first(name),
     score = first(score),
     grade = first(grade),
     borough = first(borough),
@@ -55,9 +59,10 @@ rest_inspec = rest_inspec |>
   group_by(camis) |>
   mutate(avg_score = mean(score, na.rm = TRUE),
          n_inspections = sum(!is.na(score), na.rm = TRUE),
-         cuisine_description = if_else( 
-           str_detect(cuisine_description, regex("Latin", ignore_case = TRUE)), 
-           "Latin", cuisine_description)
+         cuisine_description = case_when(
+           str_detect(cuisine_description, regex("Latin", ignore_case = TRUE)) ~ "Latin",
+           str_detect(cuisine_description, regex("Bottled beverages, including water, sodas, juices", ignore_case = TRUE)) ~ "Bottled beverages", 
+           TRUE ~ cuisine_description)
          ) |> 
   ungroup()
 
@@ -71,20 +76,20 @@ manhattan_rest = rest_inspec |>
 ```
 
 
-Column {data-width=650}
+row {data-height=650}
 -----------------------------------------------------------------------
 ### Violation Score Map in Manhattan
 
 ```{r}
 manhattan_rest |> 
   mutate(
-    label = str_c("Violation Score: ", avg_score, "\nCuisine: ", cuisine_description)
+    label = str_c("Average Violation Score: ", round(avg_score), "\nStreet: ", street, "\nName: ", name, "\nCuisine: ", cuisine_description)
   ) |> 
   distinct(camis, avg_score, .keep_all = TRUE) |> 
   filter(
     avg_score > 0,
-    avg_score <= 30) |> 
-  slice_sample(prop = 0.4) |> 
+    avg_score <= 40) |> 
+  slice_sample(prop = 0.5) |> 
   plot_ly(
     x = ~longitude, 
     y = ~latitude, 
@@ -96,28 +101,8 @@ manhattan_rest |>
   )
 ```
 
-Column {data-width=350}
------------------------------------------------------------------------
 
-### Grade Boxplot
-
-```{r}
-manhattan_rest |> 
-  mutate(
-    grade = fct_reorder(grade, avg_score, .na_rm = TRUE),
-  ) |> 
-  plot_ly(
-    x = ~grade, y = ~avg_score, color = ~grade,
-    type = "box", colors = "viridis"
-  ) |> 
-  layout(
-    xaxis = list(title = "Health Grade Level in Manhattan"),
-    yaxis = list(title = "Average Violation Score")
-  )
-```
-
-
-### Borough Bar Chart
+### NYC Restaurants by Borough
 
 ```{r}
 rest_inspec |> 
@@ -137,3 +122,63 @@ rest_inspec |>
 ```
 
 
+
+row {data-height=350} {.tabset .tabset-fade}
+-----------------------------------------------------------------------
+
+### Violation Score by Cuisine Type in Manhattan
+
+```{r}
+manhattan_rest |> 
+  mutate(
+     cuisine_description = fct_reorder(cuisine_description, avg_score, .na_rm = TRUE),
+  ) |> 
+  plot_ly(
+    x = ~cuisine_description, 
+    y = ~avg_score, 
+    color = ~cuisine_description,
+    type = "box", 
+    colors = "viridis"
+    ) |> 
+  layout(
+    xaxis = list(title = "Restaurant Cuisine type in Manhattan"),
+    yaxis = list(title = "Average Score")
+  )
+```
+
+### Violation Score by Health Grade
+
+```{r}
+manhattan_rest |> 
+  mutate(
+    grade = fct_reorder(grade, avg_score, .na_rm = TRUE),
+  ) |> 
+  plot_ly(
+    x = ~grade, y = ~avg_score, color = ~grade,
+    type = "box", colors = "viridis"
+  ) |> 
+  layout(
+    xaxis = list(title = "Health Grade Level in Manhattan"),
+    yaxis = list(title = "Average Violation Score")
+  )
+```
+
+
+
+### Health Grade Level Frequency
+
+```{r}
+manhattan_rest |> 
+  count(grade) |> 
+  mutate(
+    grade = fct_reorder(grade, n)
+  ) |> 
+  plot_ly(
+    x = ~grade, y = ~n, color = ~grade,
+    type = "bar"
+  ) |> 
+  layout(
+    xaxis = list(title = "Health Grade Level"),
+    yaxis = list(title = "Frequency in Manhattan")
+  )
+```

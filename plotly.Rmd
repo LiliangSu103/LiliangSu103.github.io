@@ -78,7 +78,7 @@ manhattan_rest |>
   filter(
     avg_score > 5,
     avg_score <= 30) |> 
-  slice_sample(prop = 0.5) |> 
+  slice_sample(prop = 0.2) |> 
   plot_ly(
     x = ~longitude, 
     y = ~latitude, 
@@ -139,8 +139,8 @@ manhattan_rest |>
     type = "bar"
   ) |> 
   layout(
-    xaxis = list(title = "Health Grade level"),
-    yaxis = list(title = "Occurence in Manhattan")
+    xaxis = list(title = "Health Grade Level"),
+    yaxis = list(title = "Frequency in Manhattan")
   )
 ```
 

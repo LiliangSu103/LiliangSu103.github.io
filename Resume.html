@@ -11,7 +11,7 @@
 
 
 
-<title>Resume</title>
+<title>Liliang Su</title>
 
 <script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -29,11 +29,12 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
-<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet" />
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 <link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -223,6 +224,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -230,6 +294,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -256,7 +330,7 @@ $(document).ready(function () {
   <a href="resume.html">Resume</a>
 </li>
 <li>
-  <a href="rlotly.html">NYC Restaurants Inspection Plots</a>
+  <a href="plotly.html">NYC Restaurants Inspection Plots</a>
 </li>
 <li>
   <a href="dashboard.html">Dashboard</a>
@@ -288,155 +362,126 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Resume</h1>
+<h1 class="title toc-ignore">Liliang Su</h1>
 
 </div>
 
 
-<style>
-body { font-family: "Helvetica Neue", Arial, sans-serif; line-height:1.45; max-width:900px; margin: 28px auto; color: #222; }
-h1 { font-size: 30px; margin-bottom: 6px; }
-h2 { font-size: 18px; margin-top: 22px; color: #111; border-bottom: 1px solid #eee; padding-bottom:6px;}
-.contact { margin-bottom: 16px; }
-.contact a { margin-right: 12px; text-decoration: none; color: #0077cc; }
-.section-row { display:flex; justify-content: space-between; align-items:flex-start; }
-.job { margin-bottom: 12px; }
-.job .meta { color:#666; font-size: 0.95em; }
-.badge { font-size:0.82em; color:#fff; background:#666; padding:2px 6px; border-radius:4px; margin-left:6px; }
-.skills { display:flex; flex-wrap:wrap; gap:8px; }
-.skill-pill { padding:6px 8px; border-radius:6px; background:#f2f2f2; font-size:0.92em; }
-</style>
-<div id="liliang-su" class="section level1">
-<h1>Liliang Su</h1>
-<strong>Student / Columbia University</strong><br />
-
-<div class="contact">
-<p><a href="https://github.com/LiliangSu103">GitHub</a> <a
-href="mailto:ls4236@cumc.columbia.edu">Email</a> <a
-href="https://www.linkedin.com/in/liliang-su-797a05381/">Linkedln</a></p>
+<p><strong>Email:</strong> <a
+href="mailto:%3Cls4236@cumc.columbia.edu%3E">ls4236@cumc.columbia.edu</a></p>
+<p><strong>LinkedIn:</strong> <a
+href="https://www.linkedin.com/in/liliang-su-797a05381">linkedin.com/in/liliang-su/</a></p>
+<p><strong>GitHub:</strong> <a
+href="http://github.com/LiliangSu103/">github.com/LiliangSu103</a></p>
+<hr />
 <div id="education" class="section level2">
 <h2>Education</h2>
-<p><strong>M.S. — Columbia University</strong><br />
-<em>Master of Science in Biostatistics</em> — New York, NY •
-<strong>Sep.2025 — Present</strong><br />
-- Advisor: Prof. Name (if relevant).<br />
-- Thesis: <em>Title of thesis / primary project</em>. Short one-line
-summary.</p>
-<p><strong>Another Degree — Institution</strong><br />
-<em>Degree, Program</em> — City, Country • <strong>Start —
-End</strong></p>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<strong>Columbia University</strong> <strong>New York, NY</strong>
+</p>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<span>Master of Science in Biostatistics</span> <span>Sep. 2025 –
+Present</span>
+</p>
+<br>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<strong>Nankai University</strong> <strong>Tianjin, China</strong>
+</p>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<span>Bachelor of Science in Mathematics and Applied Mathematics</span>
+<span>Sep. 2021 – June. 2025</span>
+</p>
+<hr />
 </div>
-<div id="professional-experience" class="section level2">
-<h2>Professional Experience</h2>
-<div id="job-title-organization-name" class="section level3">
-<h3>Job Title — Organization Name</h3>
-<div class="meta">
-City, Country • <strong>Month YYYY — Month YYYY</strong>
-</div>
+<div id="research-experience" class="section level2">
+<h2>Research Experience</h2>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<strong>Research Intern at Bioinformatics Lab, Nankai
+University</strong> <span>Dec. 2024 – May 2025</span>
+</p>
 <ul>
-<li>Brief one-line role summary (impact-oriented).</li>
-<li>Key responsibility or project #1 (use <em>quantified</em>
-achievements if possible).</li>
-<li>Key responsibility or project #2 — technologies / methods used:
-<code>R</code>, <code>tidyverse</code>, <code>stan</code>,
-<code>bash</code>, etc.</li>
+<li>Developed a novel hybrid dynamic-static topological molecular
+representation in Python to enhance the prediction of key polymer
+properties<br />
+</li>
+<li>Engineered 41-dimensional feature vectors by integrating multi-scale
+simplicial complex analysis for static 3D structure features with
+persistent homology barcodes for dynamic multi-scale topological
+features<br />
+</li>
+<li>Achieved significant performance improvements over traditional
+geometric deep learning models on complex polymer datasets, and
+documented the full methodology and results in a bachelor’s thesis</li>
 </ul>
-</div>
-<div id="job-title-organization-name-1" class="section level3">
-<h3>Job Title — Organization Name</h3>
-<div class="meta">
-City, Country • <strong>Month YYYY — Month YYYY</strong>
-</div>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<strong>Member of a 4-student research group, remote, MIT</strong>
+<span>Jan. 2024 – Mar. 2024</span>
+</p>
 <ul>
-<li>Bullet describing accomplishments and measurable outcomes.</li>
-<li>Another achievement with tools or methods.</li>
+<li>Investigated the influence of architectural modifications on object
+detection performance by conducting a literature review on the
+development of the YOLO model family<br />
+</li>
+<li>Enhanced the YOLOv5 model’s performance by improving the C3 module,
+refining the loss function, and implemented cross-validation for robust
+training</li>
 </ul>
-</div>
-</div>
-<div id="research-projects" class="section level2">
-<h2>Research / Projects</h2>
-<div id="project-title-link-if-hosted" class="section level3">
-<h3>Project Title (link if hosted)</h3>
-<div class="meta">
-Short project / paper description • Tools: R, Python, SQL, etc.
-</div>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+<strong>Leader of a 3-student research group, remote, CMU</strong>
+<span>Jul. 2023 – Aug. 2023</span>
+</p>
 <ul>
-<li>What you built or discovered and the impact (one sentence).</li>
-<li>If code available: link to GitHub repo:
-<code>https://github.com/YOUR_GH_NAME/REPO</code>.</li>
+<li>Investigated machine learning pipeline for image classification by
+constructing and optimizing Convolutional Neural Network (CNN)
+algorithms built with Keras<br />
+</li>
+<li>Employed various techniques to boost model performance including
+dynamic learning rate algorithms, backpropagation optimization, and data
+augmentation</li>
 </ul>
+<hr />
 </div>
-<div id="another-project-or-paper" class="section level3">
-<h3>Another Project or Paper</h3>
-<div class="meta">
-Conference / Journal (if submitted or published) — Year
+<div id="projects" class="section level2">
+<h2>Projects</h2>
+<p><strong>Time Series Analysis of U.S. Inflation (1970–1990)</strong> -
+Built ARIMA models and visualized monthly inflation data.<br />
+- Conducted stationarity tests and residual diagnostics using R.</p>
+<p><strong>NYC Restaurant Health Inspection Dashboard</strong> - Created
+interactive <code>plotly</code> maps showing violation trends across
+boroughs.<br />
+- Cleaned large DOHMH datasets using <code>tidyverse</code>
+functions.</p>
+<hr />
 </div>
+<div id="community-activities" class="section level2">
+<h2>Community Activities</h2>
 <ul>
-<li>One-line summary and contribution.</li>
+<li>Community Art Instructor, Sun Boxiang Art Gallery, Tianjin
+(2024)<br />
+</li>
+<li>Volunteer Staff, Sun Boxiang Art Gallery, Tianjin (2024)</li>
 </ul>
-</div>
-</div>
-<div id="teaching-mentoring" class="section level2">
-<h2>Teaching &amp; Mentoring</h2>
-<strong>Course or Role — Institution</strong><br />
-
-<div class="meta">
-Semester Year
-</div>
-<ul>
-<li>Taught / assisted with: list responsibilities (lectures, labs,
-grading).</li>
-<li>Mentored X undergrad/masters students — topics and outcomes.</li>
-</ul>
+<hr />
 </div>
 <div id="skills" class="section level2">
 <h2>Skills</h2>
-<div class="skills">
-<p><span class="skill-pill">R (tidyverse)</span> <span
-class="skill-pill">Python (pandas, scikit-learn)</span> <span
-class="skill-pill">Bayesian inference (Stan, brms)</span> <span
-class="skill-pill">SQL</span> <span class="skill-pill">Git/GitHub</span>
-<span class="skill-pill">LaTeX</span> <span
-class="skill-pill">Docker</span></p>
-</div>
-</div>
-<div id="selected-publications-preprints" class="section level2">
-<h2>Selected Publications &amp; Preprints</h2>
 <ul>
-<li><strong>LastName, F.</strong>, Coauthor, <em>Title of paper</em>,
-<em>Journal Name</em>, Year. DOI or link.<br />
+<li><strong>Programming:</strong> R, Python, C++, Git, LaTeX<br />
 </li>
-<li>Preprint: <em>Title</em>, arXiv:xxxx.xxxx, Year. Link.</li>
+<li><strong>Data Analysis:</strong> tidyverse, ggplot2, dplyr,
+plotly</li>
+<li><strong>Statistical Modeling:</strong> Regression, Time Series,
+Hypothesis Testing, Linear Regression Model, Generalized Linear Model,
+CNN, TensorFlow, Monte Carlo Evaluation</li>
 </ul>
-</div>
-<div id="awards-honors" class="section level2">
-<h2>Awards &amp; Honors</h2>
-<ul>
-<li>Name of award — awarding body, Year. Short note if useful.</li>
-<li>Fellowship — Institution, Year.</li>
-</ul>
-</div>
-<div id="service-outreach" class="section level2">
-<h2>Service &amp; Outreach</h2>
-<ul>
-<li>Reviewer for <em>Journal Name</em> (years) / volunteer instructor at
-workshop, etc.</li>
-<li>Organizer of seminar series, hackathons, or relevant outreach.</li>
-</ul>
-</div>
-<div id="availability-contact" class="section level2">
-<h2>Availability &amp; Contact</h2>
-<p>Open to collaboration / new opportunities (optional). For quick
-contact: <strong><a href="mailto:you@example.com"
-class="email">you@example.com</a></strong> — or use the links at the
-top.</p>
+<hr />
 <p>Go back to the <a href="index.html">homepage</a>.</p>
 </div>
+
+
+
 </div>
 </div>
-
-
-
 
 </div>
 
@@ -469,6 +514,35 @@ $(document).ready(function () {
 
 <!-- code folding -->
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

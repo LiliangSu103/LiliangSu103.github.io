@@ -1,97 +1,111 @@
 ---
-title: "Resume"
+title: "Liliang Su"
 output:
   html_document:
-    toc: false
-    css: null
-    self_contained: true
-    df_print: paged
+    toc: true
+    toc_float: true
+    highlight: textmate
 ---
 
-<style>
-body { font-family: "Helvetica Neue", Arial, sans-serif; line-height:1.45; max-width:900px; margin: 28px auto; color: #222; }
-h1 { font-size: 30px; margin-bottom: 6px; }
-h2 { font-size: 18px; margin-top: 22px; color: #111; border-bottom: 1px solid #eee; padding-bottom:6px;}
-.contact { margin-bottom: 16px; }
-.contact a { margin-right: 12px; text-decoration: none; color: #0077cc; }
-.section-row { display:flex; justify-content: space-between; align-items:flex-start; }
-.job { margin-bottom: 12px; }
-.job .meta { color:#666; font-size: 0.95em; }
-.badge { font-size:0.82em; color:#fff; background:#666; padding:2px 6px; border-radius:4px; margin-left:6px; }
-.skills { display:flex; flex-wrap:wrap; gap:8px; }
-.skill-pill { padding:6px 8px; border-radius:6px; background:#f2f2f2; font-size:0.92em; }
-</style>
+**Email:** [ls4236@cumc.columbia.edu](mailto:<ls4236@cumc.columbia.edu>)
 
-# Liliang Su
-**Student / Columbia University**  
-<div class="contact">
-[GitHub](https://github.com/LiliangSu103)
-[Email](mailto:ls4236@cumc.columbia.edu)
-[Linkedln](https://www.linkedin.com/in/liliang-su-797a05381/)
+**LinkedIn:** [linkedin.com/in/liliang-su/](https://www.linkedin.com/in/liliang-su-797a05381)
 
+**GitHub:** [github.com/LiliangSu103](http://github.com/LiliangSu103/)  
+
+
+---
 
 ## Education
-**M.S. — Columbia University**  
-*Master of Science in Biostatistics* — New York, NY • **Sep.2025 — Present**  
-- Advisor: Prof. Name (if relevant).  
-- Thesis: *Title of thesis / primary project*. Short one-line summary.
 
-**Another Degree — Institution**  
-*Degree, Program* — City, Country • **Start — End**
 
-## Professional Experience
-### Job Title — Organization Name
-<div class="meta">City, Country • **Month YYYY — Month YYYY**</div>
-- Brief one-line role summary (impact-oriented).
-- Key responsibility or project #1 (use *quantified* achievements if possible).
-- Key responsibility or project #2 — technologies / methods used: `R`, `tidyverse`, `stan`, `bash`, etc.
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <strong>Columbia University</strong>
+  <strong>New York, NY</strong>
+</p>
 
-### Job Title — Organization Name
-<div class="meta">City, Country • **Month YYYY — Month YYYY**</div>
-- Bullet describing accomplishments and measurable outcomes.
-- Another achievement with tools or methods.
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <span>Master of Science in Biostatistics</span>
+  <span>Sep. 2025 – Present</span>
+</p>
 
-## Research / Projects
-### Project Title (link if hosted)
-<div class="meta">Short project / paper description • Tools: R, Python, SQL, etc.</div>
-- What you built or discovered and the impact (one sentence).
-- If code available: link to GitHub repo: `https://github.com/YOUR_GH_NAME/REPO`.
+<br>
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <strong>Nankai University</strong>
+  <strong>Tianjin, China</strong>
+</p>
 
-### Another Project or Paper
-<div class="meta">Conference / Journal (if submitted or published) — Year</div>
-- One-line summary and contribution.
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <span>Bachelor of Science in Mathematics and Applied Mathematics</span>
+  <span>Sep. 2021 – June. 2025</span>
+</p>
 
-## Teaching & Mentoring
-**Course or Role — Institution**  
-<div class="meta">Semester Year</div>
-- Taught / assisted with: list responsibilities (lectures, labs, grading).
-- Mentored X undergrad/masters students — topics and outcomes.
+---
+
+## Research Experience
+
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <strong>Research Intern at Bioinformatics Lab, Nankai University</strong>
+  <span>Dec. 2024 – May 2025</span>
+</p>
+
+- Developed a novel hybrid dynamic-static topological molecular representation in Python to enhance the
+prediction of key polymer properties  
+- Engineered 41-dimensional feature vectors by integrating multi-scale simplicial complex analysis for static 3D
+structure features with persistent homology barcodes for dynamic multi-scale topological features  
+- Achieved significant performance improvements over traditional geometric deep learning models on complex
+polymer datasets, and documented the full methodology and results in a bachelor’s thesis  
+
+
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <strong>Member of a 4-student research group, remote, MIT</strong>
+  <span>Jan. 2024 – Mar. 2024</span>
+</p>
+
+- Investigated the influence of architectural modifications on object detection performance by conducting a
+literature review on the development of the YOLO model family  
+- Enhanced the YOLOv5 model’s performance by improving the C3 module, refining the loss function, and
+implemented cross-validation for robust training 
+
+<p style="display: flex; justify-content: space-between; margin: 0;">
+  <strong>Leader of a 3-student research group, remote, CMU</strong>
+  <span>Jul. 2023 – Aug. 2023</span>
+</p>
+- Investigated machine learning pipeline for image classification by constructing and optimizing Convolutional
+Neural Network (CNN) algorithms built with Keras  
+- Employed various techniques to boost model performance including dynamic learning rate algorithms,
+backpropagation optimization, and data augmentation
+
+---
+
+## Projects
+
+**Time Series Analysis of U.S. Inflation (1970–1990)**
+- Built ARIMA models and visualized monthly inflation data.  
+- Conducted stationarity tests and residual diagnostics using R.  
+
+**NYC Restaurant Health Inspection Dashboard**
+- Created interactive `plotly` maps showing violation trends across boroughs.  
+- Cleaned large DOHMH datasets using `tidyverse` functions.  
+
+---
+
+## Community Activities
+
+- Community Art Instructor, Sun Boxiang Art Gallery, Tianjin (2024)  
+- Volunteer Staff, Sun Boxiang Art Gallery, Tianjin (2024)
+
+---
+
 
 ## Skills
-<div class="skills">
-<span class="skill-pill">R (tidyverse)</span>
-<span class="skill-pill">Python (pandas, scikit-learn)</span>
-<span class="skill-pill">Bayesian inference (Stan, brms)</span>
-<span class="skill-pill">SQL</span>
-<span class="skill-pill">Git/GitHub</span>
-<span class="skill-pill">LaTeX</span>
-<span class="skill-pill">Docker</span>
-</div>
 
-## Selected Publications & Preprints
-- **LastName, F.**, Coauthor, _Title of paper_, *Journal Name*, Year. DOI or link.  
-- Preprint: _Title_, arXiv:xxxx.xxxx, Year. Link.
+- **Programming:** R, Python, C++, Git, LaTeX  
+- **Data Analysis:** tidyverse, ggplot2, dplyr, plotly
+- **Statistical Modeling:** Regression, Time Series, Hypothesis Testing, Linear Regression Model,
+Generalized Linear Model, CNN, TensorFlow, Monte Carlo Evaluation 
 
-## Awards & Honors
-- Name of award — awarding body, Year. Short note if useful.
-- Fellowship — Institution, Year.
-
-## Service & Outreach
-- Reviewer for _Journal Name_ (years) / volunteer instructor at workshop, etc.
-- Organizer of seminar series, hackathons, or relevant outreach.
-
-## Availability & Contact
-Open to collaboration / new opportunities (optional). For quick contact: **you@example.com** — or use the links at the top.
+---
 
 
 Go back to the [homepage](index.html).
