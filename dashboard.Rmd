@@ -43,19 +43,7 @@ rest_inspec = rest_inspec |>
          !is.na(score)) |> 
   select(camis, name, borough, zipcode, street, cuisine_description, 
          score, grade, longitude, latitude, inspection_date) |>
-  group_by(camis, inspection_date) |> 
-  summarize(
-    street = first(street),
-    name = first(name),
-    score = first(score),
-    grade = first(grade),
-    borough = first(borough),
-    zipcode = first(zipcode),
-    cuisine_description = first(cuisine_description),
-    longitude = first(longitude),
-    latitude = first(latitude),
-    .groups = "drop"
-  ) |> 
+  distinct(camis, inspection_date, .keep_all = TRUE) |> 
   group_by(camis) |>
   mutate(avg_score = mean(score, na.rm = TRUE),
          n_inspections = sum(!is.na(score), na.rm = TRUE),
@@ -88,8 +76,8 @@ manhattan_rest |>
   distinct(camis, avg_score, .keep_all = TRUE) |> 
   filter(
     avg_score > 0,
-    avg_score <= 40) |> 
-  slice_sample(prop = 0.5) |> 
+    avg_score <= 30) |> 
+  slice_sample(prop = 0.4) |> 
   plot_ly(
     x = ~longitude, 
     y = ~latitude, 
@@ -97,8 +85,8 @@ manhattan_rest |>
     text = ~ label,
     type = "scatter", 
     mode = "markers",
-    alpha = 0.5
-  )
+    alpha = 0.8
+    )
 ```
 
 
