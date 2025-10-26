@@ -66,6 +66,7 @@ polymer datasets, and documented the full methodology and results in a bachelorâ
 literature review on the development of the YOLO model family  
 - Enhanced the YOLOv5 modelâ€™s performance by improving the C3 module, refining the loss function, and
 implemented cross-validation for robust training 
+- Experimentally proved that targeted architectural modifications can create more parameter-efficient models
 
 <p style="display: flex; justify-content: space-between; margin: 0;">
   <strong>Leader of a 3-student research group, remote, CMU</strong>
@@ -75,6 +76,7 @@ implemented cross-validation for robust training
 Neural Network (CNN) algorithms built with Keras  
 - Employed various techniques to boost model performance including dynamic learning rate algorithms,
 backpropagation optimization, and data augmentation
+- Achieved 87.16% accuracy on CIFAR-10, surpassing the baseline reported in most state-of-the-art models
 
 ---
 

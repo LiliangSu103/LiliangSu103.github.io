@@ -59,7 +59,9 @@ manhattan_rest = rest_inspec |>
 
 ```
 
-Scatter Plot
+## Scatter Plot
+
+### Violation Score Map in Manhattan
 
 ```{r}
 manhattan_rest |> 
@@ -82,7 +84,9 @@ manhattan_rest |>
     )
 ```
 
-Boxplot
+## Boxplot
+
+### Violation Score by Health Grade
 
 ```{r}
 manhattan_rest |> 
@@ -98,6 +102,9 @@ manhattan_rest |>
     yaxis = list(title = "Average Violation Score")
   )
 ```
+
+
+### Violation Score by Cuisine Type in Manhattan
 
 ```{r}
 manhattan_rest |> 
@@ -118,7 +125,10 @@ manhattan_rest |>
 ```
 
 
-Bar chart
+## Bar chart
+
+
+### Health Grade Level Frequency
 
 ```{r}
 manhattan_rest |> 
@@ -136,6 +146,8 @@ manhattan_rest |>
   )
 ```
 
+
+### NYC Restaurants by Borough
 
 ```{r}
 rest_inspec |> 
